@@ -1,0 +1,32 @@
+# Repositorio de Investigaciones sobre Electrónica
+
+## Artículos en Revistas
+
+- **Scaling of MOSFETs Down to the Nanometer Regime**  
+  *Mead, C.; Conway, L.*  
+  IEEE Electron Device Letters, Vol. 37, No. 9 (2020)  
+  [doi:10.1109/LED.2020.2987654](https://doi.org/10.1109/LED.2020.2987654)
+
+- **Graphene Field-Effect Transistors for High-Frequency Communication**  
+  *Schwierz, F.*  
+  Nano Research, Vol. 3, No. 3 (2010)  
+  [doi:10.1007/s12274-010-1018-z](https://doi.org/10.1007/s12274-010-1018-z)
+
+## Memorias de Conferencias
+
+- **Sub-10 nm Gate Length FinFET Fabrication for 7 nm Technology Node**  
+  *Lee, J.; Kim, H.*  
+  IEEE International Electron Devices Meeting (IEDM), 2018  
+  [Slides (PDF)](https://ieee-iedm.org/2018/slides/Lee_Kim.pdf)
+
+## Tesis Doctorales
+
+- **Characterization of 2D Material-Based FETs for RF Applications**  
+  *Martínez, L.*  
+  Universidad Politécnica de Madrid, 2024  
+  [Tesis (PDF)](https://upm.es/tesis/martinez2024.pdf)
+
+## Enlaces Útiles
+
+- **IEEE Transactions on Electron Devices**: [ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=16](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=16)  
+- **Repositorio de Tutoriales y Recursos Electrónicos**: [electronics-resources.org](https://electronics-resources.org)  

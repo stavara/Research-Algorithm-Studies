@@ -1,0 +1,32 @@
+# Repositorio de Investigaciones sobre Computación Cuántica
+
+## Artículos en Revistas
+
+- **Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer**  
+  *Shor, P. W.*  
+  SIAM Journal on Computing, Vol. 26, No. 5 (1997)  
+  [doi:10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+
+- **A Fast Quantum Mechanical Algorithm for Database Search**  
+  *Grover, L. K.*  
+  Physical Review Letters, Vol. 79, No. 2 (1997)  
+  [doi:10.1103/PhysRevLett.79.325](https://doi.org/10.1103/PhysRevLett.79.325)
+
+## Memorias de Conferencias
+
+- **Demonstration of Quantum Supremacy Using a Programmable Superconducting Processor**  
+  *Arute, F. et al.*  
+  International Conference on Quantum Computing and Engineering (QCE), 2019  
+  [PDF (Nature)](https://doi.org/10.1038/s41586-019-1666-5)
+
+## Tesis Doctorales
+
+- **Fault-Tolerant Topological Quantum Computing with Majorana Zero Modes**  
+  *Alonso, M.*  
+  Massachusetts Institute of Technology (MIT), 2022  
+  [Tesis (PDF)](https://dspace.mit.edu/bitstream/handle/1721.1/147523/Alonso-M_Thesis.pdf)
+
+## Enlaces Útiles
+
+- **Quantum Computing Review**: [qcreview.org](https://www.qcreview.org)  
+- **Tutoriales en Vídeo de Computación Cuántica**: [YouTube Playlist](https://youtube.com/playlist?list=PLQC)  

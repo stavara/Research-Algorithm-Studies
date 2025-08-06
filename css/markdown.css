@@ -1,0 +1,155 @@
+/* ================================================
+   Markdown Container â€“ estilos extendidos
+   ================================================ */
+.more-info .markdown-container {
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+/* Encabezados */
+.more-info .markdown-container h1,
+.more-info .markdown-container h2,
+.more-info .markdown-container h3,
+.more-info .markdown-container h4,
+.more-info .markdown-container h5,
+.more-info .markdown-container h6 {
+    margin: 1.5em 0 0.5em 0;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.more-info .markdown-container h1 {
+    margin: 0 0 1.5em 0;
+    text-align: center;
+}
+
+.more-info .markdown-container h1 { font-size: 2rem; color: #000; }
+.more-info .markdown-container h2 { font-size: 1.75rem; color: #000; }
+.more-info .markdown-container h3 { font-size: 1.5rem; color: #000; }
+.more-info .markdown-container h4 { font-size: 1.25rem; color: #000; }
+.more-info .markdown-container h5 { font-size: 1.1rem; color: #000; }
+.more-info .markdown-container h6 { font-size: 1rem; color: #000; }
+/* PÃ¡rrafos */
+.more-info .markdown-container p {
+    margin: 0.75em 0;
+}
+/* Enlaces */
+.more-info .markdown-container a {
+    color: #96254a;
+    text-decoration: underline;
+}
+.more-info .markdown-container a:hover {
+    color: #c63969;
+}
+/* Ã‰nfasis y texto fuerte */
+.more-info .markdown-container em {
+    font-style: italic;
+}
+.more-info .markdown-container strong {
+    font-weight: 700;
+}
+/* Listas */
+.more-info .markdown-container ul,
+.more-info .markdown-container ol {
+    margin: 0.75em 0 0.75em 1.5em;
+    padding: 0;
+}
+.more-info .markdown-container li {
+    margin: 0.5em 0;
+}
+.more-info .markdown-container ul ul,
+.more-info .markdown-container ol ul,
+.more-info .markdown-container ul ol,
+.more-info .markdown-container ol ol {
+    margin-left: 1.25em;
+}
+/* Task lists */
+.more-info .markdown-container li.task-list-item {
+    list-style: none;
+}
+.more-info .markdown-container li.task-list-item input[type="checkbox"] {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+/* Blockquotes */
+.more-info .markdown-container blockquote {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border-left: 4px solid #96254a;
+    background: #f9f2f4;
+}
+/* CÃ³digo inline y bloques */
+.more-info .markdown-container code {
+    background: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+.more-info .markdown-container pre {
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+.more-info .markdown-container pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+/* Tablas */
+.more-info .markdown-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+.more-info .markdown-container th,
+.more-info .markdown-container td {
+    border: 1px solid #ddd;
+    padding: 0.5em 0.75em;
+    text-align: left;
+}
+.more-info .markdown-container th {
+    background: #f2f2f2;
+    font-weight: 600;
+}
+/* ImÃ¡genes */
+.more-info .markdown-container img {
+    max-width: 100%;
+    display: block;
+    margin: 1em auto;
+}
+/* Reglas horizontales */
+.more-info .markdown-container hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2em 0;
+}
+/* DefiniciÃ³n de listas */
+.more-info .markdown-container dl {
+    margin: 1em 0;
+}
+.more-info .markdown-container dt {
+    font-weight: 600;
+    margin: 0.5em 0 0.25em;
+}
+.more-info .markdown-container dd {
+    margin: 0 0 0.5em 1.5em;
+}
+/* Notas al pie */
+.more-info .markdown-container sup.footnote-ref {
+    font-size: 0.75em;
+}
+.more-info .markdown-container div.footnotes {
+    font-size: 0.85em;
+    border-top: 1px solid #ddd;
+    margin-top: 2em;
+    padding-top: 1em;
+}
+.more-info .markdown-container .footnotes ol {
+    padding-left: 1.5em;
+}
