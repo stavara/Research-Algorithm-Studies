@@ -1,0 +1,46 @@
+# Investigación Científica de Ejemplo
+
+## Introducción
+
+Bienvenido a este documento de ejemplo en **Markdown**. Aquí demostraré varios elementos comunes:
+
+- **Negrita**, *cursiva* y ~~tachado~~
+- Enlaces: [OpenAI](https://openai.com)
+- Listas ordenadas y desordenadas
+- Bloques de código e inline code
+- Tablas
+- Imágenes
+- Citas
+- Matemáticas con MathJax
+
+---
+
+## Sección 1: Contenido Básico
+
+Este es un párrafo de texto normal. Puedes mezclar formatos como **negrita**, *cursiva* y `código inline` sin problema.
+
+### Lista Desordenada
+
+- Elemento 1
+- Elemento 2
+  - Sub-elemento 2.1
+  - Sub-elemento 2.2
+- Elemento 3
+
+### Lista Ordenada
+
+1. Paso uno
+2. Paso dos
+3. Paso tres
+
+---
+
+## Sección 2: Código
+
+**JavaScript**:
+
+```js
+function saludar(nombre) {
+  console.log(`¡Hola, ${nombre}!`);
+}
+saludar('Mundo');

@@ -1,155 +1,135 @@
-/* ================================================
-   Markdown Container â€“ estilos extendidos
-   ================================================ */
-.more-info .markdown-container {
-    font-family: "Open Sans", sans-serif;
-    color: #333;
-    line-height: 1.6;
-    font-size: 18px;
-    padding: 0;
-    margin: 0;
-}
-/* Encabezados */
-.more-info .markdown-container h1,
-.more-info .markdown-container h2,
-.more-info .markdown-container h3,
-.more-info .markdown-container h4,
-.more-info .markdown-container h5,
-.more-info .markdown-container h6 {
-    margin: 1.5em 0 0.5em 0;
-    font-weight: 600;
+#research-md h1,
+#research-md h2,
+#research-md h3,
+#research-md h4,
+#research-md h5,
+#research-md h6 {
+    margin: 1.5rem 0 1rem;
+    font-weight: 700;
     line-height: 1.25;
+    color: #222;
 }
 
-.more-info .markdown-container h1 {
-    margin: 0 0 1.5em 0;
-    text-align: center;
+#research-md h1 { font-size: 2.5rem; margin-top: 500px; !important;}
+#research-md h2 { font-size: 2rem; }
+#research-md h3 { font-size: 1.75rem; }
+#research-md h4 { font-size: 1.5rem; }
+#research-md h5 { font-size: 1.25rem; }
+#research-md h6 { font-size: 1rem; }
+
+/* Paragraphs */
+#research-md p {
+    margin: 1rem 0;
+    font-size: 1rem;
 }
 
-.more-info .markdown-container h1 { font-size: 2rem; color: #000; }
-.more-info .markdown-container h2 { font-size: 1.75rem; color: #000; }
-.more-info .markdown-container h3 { font-size: 1.5rem; color: #000; }
-.more-info .markdown-container h4 { font-size: 1.25rem; color: #000; }
-.more-info .markdown-container h5 { font-size: 1.1rem; color: #000; }
-.more-info .markdown-container h6 { font-size: 1rem; color: #000; }
-/* PÃ¡rrafos */
-.more-info .markdown-container p {
-    margin: 0.75em 0;
+/* Links */
+#research-md a {
+    color: #1a73e8;
+    text-decoration: none;
+    border-bottom: 1px dashed #1a73e8;
 }
-/* Enlaces */
-.more-info .markdown-container a {
-    color: #96254a;
+#research-md a:hover {
     text-decoration: underline;
 }
-.more-info .markdown-container a:hover {
-    color: #c63969;
+
+/* Lists */
+#research-md ul,
+#research-md ol {
+    margin: 1rem 0 1rem 1.5rem;
+    font-size: 1rem;
 }
-/* Ã‰nfasis y texto fuerte */
-.more-info .markdown-container em {
+#research-md ul li {
+    list-style-type: disc;
+    margin: 0.5rem 0;
+}
+#research-md ol li {
+    list-style-type: decimal;
+    margin: 0.5rem 0;
+}
+
+/* Blockquotes */
+#research-md blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #ccc;
+    background-color: #f9f9f9;
+    color: #555;
     font-style: italic;
 }
-.more-info .markdown-container strong {
-    font-weight: 700;
-}
-/* Listas */
-.more-info .markdown-container ul,
-.more-info .markdown-container ol {
-    margin: 0.75em 0 0.75em 1.5em;
-    padding: 0;
-}
-.more-info .markdown-container li {
-    margin: 0.5em 0;
-}
-.more-info .markdown-container ul ul,
-.more-info .markdown-container ol ul,
-.more-info .markdown-container ul ol,
-.more-info .markdown-container ol ol {
-    margin-left: 1.25em;
-}
-/* Task lists */
-.more-info .markdown-container li.task-list-item {
-    list-style: none;
-}
-.more-info .markdown-container li.task-list-item input[type="checkbox"] {
-    margin-right: 0.5em;
-    vertical-align: middle;
-}
-/* Blockquotes */
-.more-info .markdown-container blockquote {
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    border-left: 4px solid #96254a;
-    background: #f9f2f4;
-}
-/* CÃ³digo inline y bloques */
-.more-info .markdown-container code {
-    background: #f4f4f4;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-family: monospace;
-    font-size: 0.95em;
-}
-.more-info .markdown-container pre {
-    background: #f4f4f4;
-    padding: 1em;
-    border-radius: 4px;
+
+/* Code blocks */
+#research-md pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
     overflow-x: auto;
-    margin: 1em 0;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.95rem;
 }
-.more-info .markdown-container pre code {
-    background: none;
-    padding: 0;
-    border-radius: 0;
+#research-md code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.95rem;
 }
-/* Tablas */
-.more-info .markdown-container table {
+
+/* Tables */
+#research-md table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
 }
-.more-info .markdown-container th,
-.more-info .markdown-container td {
+#research-md th,
+#research-md td {
     border: 1px solid #ddd;
-    padding: 0.5em 0.75em;
+    padding: 0.75rem 1rem;
     text-align: left;
 }
-.more-info .markdown-container th {
-    background: #f2f2f2;
+#research-md th {
+    background-color: #f0f0f0;
     font-weight: 600;
 }
-/* ImÃ¡genes */
-.more-info .markdown-container img {
+
+/* Images */
+#research-md img {
     max-width: 100%;
+    height: auto;
     display: block;
-    margin: 1em auto;
+    margin: 1rem auto;
 }
-/* Reglas horizontales */
-.more-info .markdown-container hr {
+
+/* Horizontal rule */
+#research-md hr {
     border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 2rem 0;
+}
+
+/* MathJax styling overrides */
+#research-md .mjx-chtml {
+    font-size: 1.1em; /* slightly larger math */
+    margin: 1rem 0;
+}
+
+/* Footnotes (if used) */
+#research-md .footnotes {
+    font-size: 0.9rem;
     border-top: 1px solid #ddd;
-    margin: 2em 0;
+    margin-top: 2rem;
+    padding-top: 1rem;
 }
-/* DefiniciÃ³n de listas */
-.more-info .markdown-container dl {
-    margin: 1em 0;
+#research-md .footnotes li {
+    margin: 0.5rem 0;
 }
-.more-info .markdown-container dt {
-    font-weight: 600;
-    margin: 0.5em 0 0.25em;
-}
-.more-info .markdown-container dd {
-    margin: 0 0 0.5em 1.5em;
-}
-/* Notas al pie */
-.more-info .markdown-container sup.footnote-ref {
-    font-size: 0.75em;
-}
-.more-info .markdown-container div.footnotes {
-    font-size: 0.85em;
-    border-top: 1px solid #ddd;
-    margin-top: 2em;
-    padding-top: 1em;
-}
-.more-info .markdown-container .footnotes ol {
-    padding-left: 1.5em;
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #research-md h1 { font-size: 2rem; }
+    #research-md h2 { font-size: 1.75rem; }
+    #research-md h3 { font-size: 1.5rem; }
 }

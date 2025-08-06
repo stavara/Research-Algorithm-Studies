@@ -190,8 +190,14 @@ nav > ul > li > a {
     }
 }
 
-
-
 footer {
+    margin-top: 50px;
     text-align: center;
+}
+
+/* Research with mathjax - template */
+
+#research-md {
+    display: flex;
+    flex-direction: column;
 }
