@@ -163,6 +163,26 @@ nav > ul > li > a {
     margin-top: 20px;
 }
 
+/* RESEARCH */
+
+.item-research {
+    display: flex;
+}
+
+.item-research > p {
+    margin: 20px 0 0 0;
+}
+
+.item-research > p > a {
+    font-size: 21px;
+    text-decoration: none;
+    color: #2d3748;
+}
+
+.item-research > p > a:hover {
+    text-decoration: underline;
+}
+
 /* breakpoint: en pantallas estrechas se vuelve 1 columna */
 @media (max-width: 800px) {
     .grid {
@@ -173,5 +193,5 @@ nav > ul > li > a {
 
 
 footer {
-
+    text-align: center;
 }
