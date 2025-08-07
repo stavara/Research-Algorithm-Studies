@@ -99,7 +99,6 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-    #research-md { padding: 0.8rem; }
     #research-md h1 { font-size: 2rem; }
     #research-md h2 { font-size: 1.75rem; }
     #research-md h3 { font-size: 1.5rem; }
