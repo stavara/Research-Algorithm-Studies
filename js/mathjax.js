@@ -1,55 +1,65 @@
-// js/render-markdown.js
-(function() {
-    function typesetMath(container) {
-        if (window.MathJax) {
-            if (typeof MathJax.typesetPromise === 'function') {
-                MathJax.typesetPromise([container]).catch(console.error);
-            } else if (MathJax.startup && MathJax.startup.promise) {
-                MathJax.startup.promise
-                    .then(() => MathJax.typesetPromise([container]))
-                    .catch(console.error);
-            }
+'use strict';
+
+const containerId = 'research-md';
+const storageKey  = 'selectedResearch';
+const textFolder  = './text/';
+const localMarkdownIt = './js/markdown-it.js';
+
+// Función para cargar dinámicamente el script
+async function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Error cargando script: ${src}`));
+        document.head.appendChild(script);
+    });
+}
+
+async function renderMarkdownText() {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    //  Markdown-it esté disponible, si no, lo carga otra vez
+    if (typeof window.markdownit !== 'function') {
+        try {
+            await loadScript(localMarkdownIt);
+        } catch (err) {
+            container.textContent = 'Error cargando Markdown-it: ' + err.message;
+            return;
         }
     }
 
-    document.addEventListener('DOMContentLoaded', async () => {
-        const mdContainer = document.getElementById('research-md');
-        if (!mdContainer) return;
+    // Inicializa Markdown-it
+    const md = window.markdownit({ html: true, breaks: true });
 
-        // 1) Leer la clave que guardaste antes
-        const nombre = sessionStorage.getItem('selectedResearch');
-        if (!nombre) {
-            mdContainer.innerHTML = '<p>No hay investigación seleccionada.</p>';
-            return;
+    // Obtiene el nombre del archivo
+    const nombre = sessionStorage.getItem(storageKey);
+    if (!nombre) {
+        container.innerHTML = '<p>No hay investigación seleccionada.</p>';
+        return;
+    }
+
+    // Construye URL y descarga el .txt
+    const archivo = encodeURIComponent(nombre) + '.txt';
+    const url     = textFolder + archivo;
+
+    try {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error(res.statusText);
+        const raw = await res.text();
+
+        // Convierte Markdown a HTML
+        const html = md.render(raw);
+        container.innerHTML = html;
+
+        // Renderiza las ecuaciones con MathJax
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise([container]).catch(console.error);
         }
+    } catch (err) {
+        container.textContent = `Error cargando "${archivo}": ${err.message}`;
+    }
+}
 
-        // 2) Armar el nombre de archivo
-        const archivo = `${encodeURIComponent(nombre)}.txt`;
-
-        // 3) Determinar ruta relativa a GitHub Pages
-        //    Asume que tu sitio sirve los .txt desde /text/ en la misma raíz.
-        //    En GH Pages suelen estar en /<repo>/text/, así que usamos un path relativo:
-        const ruta = `./text/${archivo}`;
-
-        let rawMd;
-        try {
-            const res = await fetch(ruta, { cache: 'no-store' });
-            if (!res.ok) throw new Error(res.statusText);
-            rawMd = await res.text();
-        } catch (err) {
-            mdContainer.innerHTML = `<p>Error cargando <strong>${archivo}</strong>: ${err.message}</p>`;
-            return;
-        }
-
-        // 4) Parsear Markdown a HTML con marked.js
-        mdContainer.innerHTML = (typeof marked.parse === 'function')
-            ? marked.parse(rawMd)
-            : marked(rawMd);
-
-        // 5) Renderizar ecuaciones con MathJax
-        typesetMath(mdContainer);
-
-        // 6) (Opcional) limpiar sessionStorage
-        // sessionStorage.removeItem('selectedResearch');
-    });
-})();
+window.addEventListener('DOMContentLoaded', renderMarkdownText);
