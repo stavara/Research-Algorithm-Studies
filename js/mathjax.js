@@ -1,6 +1,5 @@
 // js/render-markdown.js
 (function() {
-
     function typesetMath(container) {
         if (window.MathJax) {
             if (typeof MathJax.typesetPromise === 'function') {
@@ -24,9 +23,14 @@
             return;
         }
 
-        // 2) Fetch del .txt
-        const archivo = encodeURIComponent(nombre) + '.txt';
-        const ruta    = `${window.location.origin}/text/${archivo}`;
+        // 2) Armar el nombre de archivo
+        const archivo = `${encodeURIComponent(nombre)}.txt`;
+
+        // 3) Determinar ruta relativa a GitHub Pages
+        //    Asume que tu sitio sirve los .txt desde /text/ en la misma raíz.
+        //    En GH Pages suelen estar en /<repo>/text/, así que usamos un path relativo:
+        const ruta = `./text/${archivo}`;
+
         let rawMd;
         try {
             const res = await fetch(ruta, { cache: 'no-store' });
@@ -37,15 +41,15 @@
             return;
         }
 
-        // 3) Parsear Markdown a HTML
+        // 4) Parsear Markdown a HTML con marked.js
         mdContainer.innerHTML = (typeof marked.parse === 'function')
             ? marked.parse(rawMd)
             : marked(rawMd);
 
-        // 4) Renderizar ecuaciones con MathJax
+        // 5) Renderizar ecuaciones con MathJax
         typesetMath(mdContainer);
 
-        // 5) Limpiar sessionStorage
+        // 6) (Opcional) limpiar sessionStorage
         // sessionStorage.removeItem('selectedResearch');
     });
 })();
