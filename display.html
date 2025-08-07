@@ -15,21 +15,12 @@
                 // No omitir <script type="math/tex">
                 skipHtmlTags: ['noscript','style','textarea','pre'],
             },
-            loader: {
-                paths: { sre: 'js/sre' },
-                load:   ['[sre]/speech-rule-engine.js']
-            },
             startup: {
                 typeset: false
             },
             tex: {
                 inlineMath: [['$','$'], ['\\(','\\)']],
                 displayMath: [['$$','$$'], ['\\[','\\]']]
-            },
-            a11y: {
-                assistiveMml: { disabled: true },
-                semantics: { disabled: true },
-                speech: { activate: false }
             }
         };
     </script>
