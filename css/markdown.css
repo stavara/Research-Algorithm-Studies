@@ -99,7 +99,25 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-    #research-md h1 { font-size: 2rem; }
-    #research-md h2 { font-size: 1.75rem; }
-    #research-md h3 { font-size: 1.5rem; }
+    /* Base h1 reduced from 40px (2.5rem) → 30px */
+    #research-md h1 { font-size: 30px; }
+
+    /* Scaled by the same factor (0.75) */
+    /* h2: was 32px (2rem) → 24px */
+    #research-md h2 { font-size: 24px; }
+
+    /* h3: was 28px (1.75rem) → 21px */
+    #research-md h3 { font-size: 21px; }
+
+    /* h4: was 24px (1.5rem) → 18px */
+    #research-md h4 { font-size: 18px; }
+
+    /* h5: was 20px (1.25rem) → 15px */
+    #research-md h5 { font-size: 15px; }
+
+    /* h6: was 16px (1rem) → 12px */
+    #research-md h6 { font-size: 12px; }
+
+    /* Paragraphs remain at 16px for readability */
+    #research-md p  { font-size: 16px; }
 }
